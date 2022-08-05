@@ -18,3 +18,23 @@
   padding: 3% 0% 3% 12%;
   color: #fff !important;
 }
+
+.ant-page-header {
+  padding: 24px;
+}
+.ant-page-header-heading-left {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+.ant-page-header-heading-title {
+  color: #ffffff;
+  font-family: "nerissemibold", Droid Sans, Arial, sans-serif;
+  font-size: 30px;
+  margin-top: 3%;
+}
+
+.ant-page-header-heading-sub-title {
+  color: #ffffff;
+}
