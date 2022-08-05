@@ -17,7 +17,7 @@ const PageWrapper = (PassedComponent) => {
                             <Layout className="site-layout"
                                 style={{ marginLeft: 200, }}>
                                 <HeaderSection />
-                                <Content style={{ padding: '16px 16px 0', overflow: 'initial', backgroundColor: '#081F2C' }}>
+                                <Content style={{ padding: '24px 16px 0', overflow: 'initial', backgroundColor: '#081F2C' }}>
                                     <div
                                         className="site-layout-background"
                                         style={{ padding: 12, /*textAlign: 'center',*/ color: '#ffffff', backgroundColor: '#081F2C' }}

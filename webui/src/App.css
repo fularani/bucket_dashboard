@@ -38,3 +38,8 @@
 .ant-page-header-heading-sub-title {
   color: #ffffff;
 }
+
+.ant-divider-horizontal.ant-divider-with-text:after,
+.ant-divider-horizontal.ant-divider-with-text:before {
+  border-top: 1px solid #253746;
+}
