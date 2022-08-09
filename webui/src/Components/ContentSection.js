@@ -113,7 +113,7 @@ const ContentSection = () => {
                     </Row>
                     <Row gutter={24}>
                         <Col span={24} className="d-flex justify-content-center h-50">
-                            <Button size="large" style={{ backgroundColor: '#B11A5F' }}>View More Statistics</Button>
+                            <Button size="large" className="btn" style={{ color: '#fff', backgroundColor: '#B11A5F', borderColor: "#B11A5F", borderRadius: '4px', cursor: 'pointer', margin: '4%' }} href="/stats">View More Statistics</Button>
                         </Col>
                     </Row>
                 </div>

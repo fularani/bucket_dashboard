@@ -3,7 +3,7 @@ import React from 'react'
 const Endpointspage = () => {
     return (
         <div className="text-white">
-            Endpointspage
+            Endpointspage content
         </div>
     )
 }

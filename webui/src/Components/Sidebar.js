@@ -26,16 +26,16 @@ const Sidebar = () => {
     const data_head = ['', <Text className="text">MONITOR</Text>, <Text className="text">CONFIGURE</Text>, <Text className="text">WORKFLOW</Text>, <Text className="text">ACCOUNT</Text>];
 
     const data = [
-        [getItem('Register', '1', <FiTool />)],
-        [getItem('Dashboard', '2', <AiFillDashboard />),
-        getItem('Location Status', '3', <BsFillFileCheckFill />),
-        getItem('Statistics', '4', <FaChartPie />)],
-        [getItem('Storage Accounts', '5', <FaKey />),
-        getItem('Storage Locations', '6', <FaGlobe />),
-        getItem('Endpoints', '7', <AiFillFolderOpen />)],
-        [getItem('Replication', '8', <RiFileCopyFill />),
-        getItem('Bucket Lifecycle', '9', <BiCircle />)],
-        [getItem('Settings', '10', <AiFillSetting />)],
+        [getItem('Register', 'Register', <FiTool />)],
+        [getItem('Dashboard', 'Dashboard', <AiFillDashboard />),
+        getItem('Location Status', 'Location Status', <BsFillFileCheckFill />),
+        getItem('Statistics', 'Statistics', <FaChartPie />)],
+        [getItem('Storage Accounts', 'Storage Accounts', <FaKey />),
+        getItem('Storage Locations', 'Storage Locations', <FaGlobe />),
+        getItem('Endpoints', 'Endpoints', <AiFillFolderOpen />)],
+        [getItem('Replication', 'Replication', <RiFileCopyFill />),
+        getItem('Bucket Lifecycle', 'Bucket Lifecycle', <BiCircle />)],
+        [getItem('Settings', 'Settings', <AiFillSetting />)],
     ];
 
     return (

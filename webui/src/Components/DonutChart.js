@@ -15,6 +15,9 @@ const DonutChart = ({ data }) => {
         label: {
             content: ""
         },
+        pieStyle: {
+            lineWidth: 0,
+        },
         color: ({ type }) => {
             if (type === "Completed" || type === "Used" || type === "Objects") {
                 return "#54678A";
@@ -29,14 +32,22 @@ const DonutChart = ({ data }) => {
                 type: "element-selected"
             },
             {
-                type: "element-active"
-            }
+                type: "element-active",
+                state: {
+                    active: {
+                        style: {
+                            lineWidth: 0,
+                            stroke: '#000',
+                        },
+                    },
+                },
+            },
         ],
         legend: { position: 'bottom', },
         statistic: {
             title: false,
             content: false,
-        }
+        },
     };
 
     return (

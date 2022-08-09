@@ -2,6 +2,8 @@ import { HiOutlineChatAlt2 } from 'react-icons/hi';
 import Pageheader from "../Components/Pageheader";
 import { Layout, Affix, Button, Avatar, Typography } from 'antd';
 import React, { useState } from 'react';
+import { useLocation } from "react-router-dom";
+
 const { Header } = Layout;
 const { Text } = Typography;
 
@@ -10,6 +12,11 @@ const { Text } = Typography;
 // const { Header } = Layout;
 
 const HeaderSection = () => {
+
+    const location = useLocation();
+    console.log(location.state);
+    // console.log(location.state.pagehead, location.state.pagetitle);
+
     const [top, setTop] = useState(10);
 
     return (
@@ -17,7 +24,7 @@ const HeaderSection = () => {
             padding: 0, color: '#ffffff', backgroundColor: '#081F2C', height: '15vh !important',
         }}>
             <div className="d-flex justify-content-between">
-                <Pageheader pagehead="ZENKO ORBIT" pagetitle="Dashboard" />
+                <Pageheader pagehead={location.state.pagehead} pagetitle={location.state.pagetitle} />
                 <Affix offsetTop={top} className="d-flex align-items-start">
                     <Button size="small" type="text" className="text-white w-auto h-auto" onClick={() => setTop(top + 10)} >
                         <Avatar

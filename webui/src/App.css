@@ -43,3 +43,9 @@
 .ant-divider-horizontal.ant-divider-with-text:before {
   border-top: 1px solid #253746;
 }
+
+.btn:focus {
+  background-color: #ffffff;
+  color: #b11a5f;
+  transition: 0.7s;
+}

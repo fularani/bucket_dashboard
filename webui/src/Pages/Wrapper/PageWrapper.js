@@ -29,7 +29,7 @@ const PageWrapper = (PassedComponent) => {
                             </Layout>
                         </Layout>
                     </header>
-                </div >
+                </div>
             )
         }
     }

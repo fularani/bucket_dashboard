@@ -1,4 +1,5 @@
 // import Pageheader from '../Components/Pageheader'
+// import HeaderSection from "./HeaderSection";
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { Typography, Menu } from 'antd';
@@ -6,32 +7,82 @@ import { Typography, Menu } from 'antd';
 const { Text } = Typography;
 
 const Menuitems = ({ items_head, items }) => {
-
     const navigate = useNavigate();
 
     const onClick = (e) => {
-        console.log(e.key);
+        // console.log(e.key);
+        // e.preventDefault();
 
-        if (e.key === '1') {
-            navigate("/", { replace: true });
-        } else if (e.key === '2') {
-            navigate("/user", { replace: true });
-        } else if (e.key === '3') {
-            navigate("/monitor/locations", { replace: true });
-        } else if (e.key === '4') {
-            navigate("/stats", { replace: true });
-        } else if (e.key === '5') {
-            navigate("/accounts", { replace: true });
-        } else if (e.key === '6') {
-            navigate("/locations", { replace: true });
-        } else if (e.key === '7') {
-            navigate("/endpoints", { replace: true });
-        } else if (e.key === '8') {
-            navigate("/replication", { replace: true });
-        } else if (e.key === '9') {
-            navigate("/lifecycle", { replace: true });
-        } else if (e.key === '10') {
-            navigate("/settings", { replace: true });
+        if (e.key === 'Register') {
+            navigate("/", {
+                state: {
+                    pagehead: "GETTING STARTED",
+                    pagetitle: "Setting Up Zenko Orbit",
+                }, replace: true
+            });
+        } else if (e.key === 'Dashboard') {
+            navigate("/user", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Location Status') {
+            navigate("/monitor/locations", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Statistics') {
+            navigate("/stats", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Storage Accounts') {
+            navigate("/accounts", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Storage Locations') {
+            navigate("/locations", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Endpoints') {
+            navigate("/endpoints", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Replication') {
+            navigate("/replication", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Bucket Lifecycle') {
+            navigate("/lifecycle", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
+        } else if (e.key === 'Settings') {
+            navigate("/settings", {
+                state: {
+                    pagehead: "ZENKO ORBIT",
+                    pagetitle: e.key,
+                }, replace: true
+            });
         } else {
             console.log("no url matched.................");
         }

@@ -3,7 +3,7 @@ import React from 'react'
 const Statisticspage = () => {
     return (
         <div className="text-white">
-            Statisticspage
+            Statisticspage content
         </div>
     )
 }

@@ -87,6 +87,14 @@ const StackedChart = () => {
             defaultColor: '081F2C',
         },
         legend: { position: 'top', },
+        xAxis: {
+            line: {
+                style: {
+                    stroke: 'black',
+                    lineWidth: 0.5,
+                }
+            }
+        },
     };
 
     return (<Column {...config} />)
