@@ -24,7 +24,7 @@ const HeaderSection = () => {
             padding: 0, color: '#ffffff', backgroundColor: '#081F2C', height: '15vh !important',
         }}>
             <div className="d-flex justify-content-between">
-                <Pageheader pagehead={location.state.pagehead} pagetitle={location.state.pagetitle} />
+                <Pageheader pagehead={location.state ? location.state.pagehead : 'ZENKO ORBIT'} pagetitle={location.state ? location.state.pagetitle : 'Dashboard'} />
                 <Affix offsetTop={top} className="d-flex align-items-start">
                     <Button size="small" type="text" className="text-white w-auto h-auto" onClick={() => setTop(top + 10)} >
                         <Avatar
