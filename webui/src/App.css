@@ -49,3 +49,27 @@
   color: #b11a5f;
   transition: 0.7s;
 }
+
+.ant-table {
+  color: #fff;
+  background: #081f2c;
+}
+
+.ant-table-thead > tr > th {
+  color: #fff;
+  background: #253746;
+  border-bottom: 1px solid #253746;
+}
+
+.ant-table-footer {
+  background: #081f2c;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid #253746;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: #081f2c;
+}
