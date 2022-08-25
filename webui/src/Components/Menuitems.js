@@ -48,14 +48,14 @@ const Menuitems = ({ items_head, items }) => {
                     pagetitle: e.key,
                 }, replace: true
             });
-        } else if (e.key === 'Storage Locations') {
+        } else if (e.key === 'Cloud Locations') {
             navigate("/locations", {
                 state: {
                     pagehead: "ZENKO ORBIT",
                     pagetitle: e.key,
                 }, replace: true
             });
-        } else if (e.key === 'Endpoints') {
+        } else if (e.key === 'Storage Endpoints') {
             navigate("/endpoints", {
                 state: {
                     pagehead: "ZENKO ORBIT",
