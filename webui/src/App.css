@@ -73,3 +73,25 @@
 .ant-table-tbody > tr > td.ant-table-cell-row-hover {
   background: #081f2c;
 }
+
+.ant-card-grid {
+  box-shadow: none;
+}
+
+.ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background: #b11a5f;
+  border: 1px solid #b11a5f;
+  color: #fff;
+}
+
+.ant-badge-status-dot {
+  width: 58px;
+  height: 15px;
+  border-radius: 8%;
+  opacity: 32%;
+}
+
+.ant-badge-status-text {
+  margin-left: -52px;
+  color: #fff;
+}

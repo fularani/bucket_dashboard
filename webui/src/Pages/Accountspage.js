@@ -70,7 +70,7 @@ const Accountspage = () => {
             <Text className="text-muted">Storage accounts are tenants of your Zenko instance.<Link href="#"><BsInfoCircleFill /></Link></Text>
             <Row style={{ marginTop: '1%' }}>
                 <Col span={24} style={{ border: '1px solid #253746', borderRadius: '2px' }}>
-                    <Table pagination={false} dataSource={dataSource} columns={columns} footer={tableFooter} />
+                    <Table pagination={false} size="middle" dataSource={dataSource} columns={columns} footer={tableFooter} />
                 </Col>
             </Row>
         </div>
