@@ -71,12 +71,12 @@ const Settingpage = () => {
             value: 'Demo',
         },
         {
-            key: '3',
+            key: '4',
             information: 'Configuration version',
             value: '22',
         },
         {
-            key: '3',
+            key: '5',
             information: 'Configuration Last Modified',
             value: 'Fri Sep 29 2017 01:09:22 GMT+0530 (India Standard Time)',
         },
