@@ -11,9 +11,11 @@ import Settingpage from "./Pages/Settingpage";
 import Statisticspage from "./Pages/Statisticspage";
 import StorageLocationspage from "./Pages/StorageLocationspage";
 import LifecycleRulepage from "./Pages/LifecycleRulepage";
+import Registerpage from "./Pages/Register/Registerpage";
 
 function App() {
 
+  const Page1Component = PageWrapper(Registerpage)
   const Page3Component = PageWrapper(LocationStatuspage)
   const Page4Component = PageWrapper(Statisticspage)
   const Page5Component = PageWrapper(Accountspage)
@@ -28,7 +30,8 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboardpage />} />
+          <Route path="/" element={<Page1Component />} />
+          <Route path="/register/1" element={<Page1Component />} />
           <Route path="/user" element={<Dashboardpage />} />
           <Route path="/monitor/locations" element={<Page3Component />} />
           <Route path="/stats" element={<Page4Component />} />
