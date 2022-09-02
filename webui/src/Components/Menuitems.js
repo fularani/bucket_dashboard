@@ -14,7 +14,7 @@ const Menuitems = ({ items_head, items }) => {
         // e.preventDefault();
 
         if (e.key === 'Register') {
-            navigate("/", {
+            navigate("/register/1", {
                 state: {
                     pagehead: "GETTING STARTED",
                     pagetitle: "Setting Up Zenko Orbit",
