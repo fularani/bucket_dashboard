@@ -1,61 +1,25 @@
 import React from 'react';
 import { Column } from '@ant-design/plots';
 
-const StackedChart = () => {
+const StackedChart = ({ data, yAxisTitle, maxY, height, isStack }) => {
 
-    function MebibyteToGigabyte(n) {
-        return n / 953.674; // 953.674 is the exact number
-    }
-
-    const data = [
-        {
-            "cloud": "AWS S3",
-            "data_value": 1,
-            "type": "Archived Data"
-        },
-        {
-            "cloud": "Azure",
-            "data_value": MebibyteToGigabyte(Number.parseFloat(512).toFixed(2)),
-            "type": "Archived Data"
-        },
-        {
-            "cloud": "Google Cloud",
-            "data_value": MebibyteToGigabyte(Number.parseFloat(512).toFixed(2)),
-            "type": "Archived Data"
-        },
-        {
-            "cloud": "AWS S3",
-            "data_value": 2,
-            "type": "Current Data"
-        },
-        {
-            "cloud": "Azure",
-            "data_value": 1,
-            "type": "Current Data"
-        },
-        {
-            "cloud": "Google Cloud",
-            "data_value": 1,
-            "type": "Current Data"
-        },
-    ];
     const config = {
         data,
-        isStack: true,
-        xField: 'cloud',
-        yField: 'data_value',
+        isStack: isStack,
+        xField: 'x_value',
+        yField: 'y_value',
         seriesField: 'type',
         meta: {
-            data_value: {
+            y_value: {
                 min: 0,
-                max: 4,
+                max: maxY,
             },
         },
         width: 'auto',
-        height: 140,
+        height: height,
         colorField: 'type', // or seriesField in some cases
         color: ({ type }) => {
-            if (type === 'Current Data') {
+            if (type === 'Current Data' || type === 'Versions' || type === 'Capacity Total') {
                 return '#586B8E';
             }
             // return '#41B3A8';
@@ -95,6 +59,12 @@ const StackedChart = () => {
                 }
             }
         },
+        yAxis: {
+            title: {
+                text: yAxisTitle,
+            },
+        },
+
     };
 
     return (<Column {...config} />)

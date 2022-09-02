@@ -1,11 +1,49 @@
 import StackedChart from "./StackedChart";
 import DataCard from "./DataCard";
 import DonutChart from "./DonutChart";
-import { Layout, Col, Divider, Row, Button } from 'antd';
+import { Layout, Col, Divider, Row } from 'antd';
+import { Link } from "react-router-dom";
 import React from 'react';
 const { Content } = Layout;
 
 const ContentSection = () => {
+
+    function MebibyteToGigabyte(n) {
+        return n / 953.674; // 953.674 is the exact number
+    }
+
+    const data = [
+        {
+            "x_value": "AWS S3",
+            "y_value": 1,
+            "type": "Archived Data"
+        },
+        {
+            "x_value": "Azure",
+            "y_value": MebibyteToGigabyte(Number.parseFloat(512).toFixed(2)),
+            "type": "Archived Data"
+        },
+        {
+            "x_value": "Google Cloud",
+            "y_value": MebibyteToGigabyte(Number.parseFloat(512).toFixed(2)),
+            "type": "Archived Data"
+        },
+        {
+            "x_value": "AWS S3",
+            "y_value": 2,
+            "type": "Current Data"
+        },
+        {
+            "x_value": "Azure",
+            "y_value": 1,
+            "type": "Current Data"
+        },
+        {
+            "x_value": "Google Cloud",
+            "y_value": 1,
+            "type": "Current Data"
+        },
+    ];
 
     const replicationstatData = [
         {
@@ -74,7 +112,7 @@ const ContentSection = () => {
                             <Divider className="text-white">
                                 DATA MANAGED
                             </Divider>
-                            <StackedChart />
+                            <StackedChart data={data} yAxisTitle='Data(GB)' maxY={4} height={140} isStack={true} />
                         </Col>
                     </Row>
                     <Row gutter={24}>
@@ -113,7 +151,7 @@ const ContentSection = () => {
                     </Row>
                     <Row gutter={24}>
                         <Col span={24} className="d-flex justify-content-center h-50">
-                            <Button size="large" className="btn" style={{ color: '#fff', backgroundColor: '#B11A5F', borderColor: "#B11A5F", borderRadius: '4px', cursor: 'pointer', margin: '4%' }} href="/stats">View More Statistics</Button>
+                            <Link to="/stats" className="d-flex align-items-center btn text-white m-5" style={{ background: '#B11A5F', borderColor: '#B11A5F', borderRadius: '3%', cursor: 'pointer' }}>View More Statistics</Link>
                         </Col>
                     </Row>
                 </div>
