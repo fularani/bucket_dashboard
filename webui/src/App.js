@@ -10,6 +10,7 @@ import Replicationpage from "./Pages/Replicationpage";
 import Settingpage from "./Pages/Settingpage";
 import Statisticspage from "./Pages/Statisticspage";
 import StorageLocationspage from "./Pages/StorageLocationspage";
+import LifecycleRulepage from "./Pages/LifecycleRulepage";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
   const Page8Component = PageWrapper(Replicationpage)
   const Page9Component = PageWrapper(BucketLifecyclepage)
   const Page10Component = PageWrapper(Settingpage)
+  const Page11Component = PageWrapper(LifecycleRulepage)
 
   return (
     <div>
@@ -36,6 +38,7 @@ function App() {
           <Route path="/replication" element={<Page8Component />} />
           <Route path="/lifecycle" element={<Page9Component />} />
           <Route path="/settings" element={<Page10Component />} />
+          <Route path="/lifecycle/lifecycle-bucket" element={<Page11Component />} />
         </Routes>
       </BrowserRouter>
     </div>
