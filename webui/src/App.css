@@ -116,3 +116,34 @@
 .notification-custom-class {
   width: 55%;
 }
+
+/* Menu CSS */
+
+.ant-menu-vertical > .ant-menu-item {
+  height: 24px;
+  line-height: 0px;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 16px;
+}
+
+.ant-menu-light > .ant-menu-item:hover {
+  color: #fff;
+}
+
+.ant-menu-light > .ant-menu-item-active {
+  background-color: #b11a5f;
+}
+
+.ant-menu-item-selected {
+  color: #fff;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #b11a5f;
+}
+
+.ant-menu-vertical {
+  border-radius: 3%;
+}

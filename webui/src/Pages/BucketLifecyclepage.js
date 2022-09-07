@@ -6,42 +6,58 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { FaHourglassEnd } from "react-icons/fa";
 import { MdDelete, MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { TbArrowsRightLeft } from "react-icons/tb";
-import { Link } from "react-router-dom";
 import React from 'react';
 const { Text } = Typography;
 
 const BucketLifecyclepage = () => {
+
     const navigate = useNavigate();
 
-    const onClick = (e) => {
-        // message.info(`Click on item ${key}`);
+    const handleClick = (e) => {
 
         if (e.key === 'Expiration') {
             navigate("/lifecycle/lifecycle-bucket"
-                // ,{
-                //     state: {
-                //         pagehead: "GETTING STARTED",
-                //         pagetitle: "Setting Up Zenko Orbit",
-                //     }, replace: true
-                // }
+                , {
+                    state: {
+                        pagehead: "ZENKO ORBIT",
+                        pagetitle: "Lifecycle Rules for lifecycle-bucket",
+                    }, replace: true
+                }
             );
         } else if (e.key === 'Transition') {
             navigate("/lifecycle/lifecycle-bucket"
-                // ,{
-                //     state: {
-                //         pagehead: "ZENKO ORBIT",
-                //         pagetitle: e.key,
-                //     }, replace: true
-                // }
+                , {
+                    state: {
+                        pagehead: "ZENKO ORBIT",
+                        pagetitle: "Lifecycle Rules for lifecycle-bucket",
+                    }, replace: true
+                }
+            );
+        } else if (e.key === 'ShowDetails') {
+            navigate("/lifecycle/lifecycle-bucket"
+                , {
+                    state: {
+                        pagehead: "ZENKO ORBIT",
+                        pagetitle: "Lifecycle Rules for lifecycle-bucket",
+                    }, replace: true
+                }
             );
         } else {
             console.log("no url matched.................");
         }
     };
 
+    const items = [
+        {
+            label: 'Show Details',
+            key: 'ShowDetails',
+            icon: <BsInfoCircleFill />,
+        },
+    ]
+
     const menu = (
         <Menu
-            onClick={onClick}
+            onClick={handleClick}
             items={[
                 {
                     label: 'Expiration',
@@ -61,16 +77,17 @@ const BucketLifecyclepage = () => {
                 <div className="w-100">
                     <Row className="px-5 py-1 w-100">
                         <Col span={12} className="d-flex justify-content-start fs-5">lifecycle-bucket</Col>
-                        <Col span={12} className="d-flex justify-content-end"><Space size="middle" className="d-flex justify-content-end" style={{ gap: '12px' }}>
-                            <Dropdown overlay={menu} icon={<IoMdArrowDropdown />} trigger={['click']} placement="bottomLeft">
-                                <a onClick={(e) => e.preventDefault()}>
-                                    <Space>
-                                        <Button type="text" className="d-flex align-items-center text-white" style={{ background: '#B11A5F' }}><AiFillPlusSquare /><span className="ps-2">Add new rule</span><IoMdArrowDropdown style={{ color: '#fff', }} /></Button>
-                                    </Space>
-                                </a>
-                            </Dropdown>
-                            <Link to="/lifecycle/lifecycle-bucket" className="d-flex align-items-center btn btn-sm text-white px-3" style={{ background: '#B11A5F', borderColor: '#B11A5F', borderRadius: '4%', cursor: 'pointer' }}><BsInfoCircleFill /><span className="ps-1">Show Details</span></Link>
-                        </Space>
+                        <Col span={12} className="d-flex justify-content-end">
+                            <Space size="middle" className="d-flex justify-content-end" style={{ gap: '12px' }}>
+                                <Dropdown overlay={menu} icon={<IoMdArrowDropdown />} trigger={['click']} placement="bottomLeft">
+                                    <a href={(e) => e.preventDefault()}>
+                                        <Space>
+                                            <Button type="text" className="d-flex align-items-center text-white" style={{ background: '#B11A5F' }}><AiFillPlusSquare /><span className="ps-2">Add new rule</span><IoMdArrowDropdown style={{ color: '#fff', }} /></Button>
+                                        </Space>
+                                    </a>
+                                </Dropdown>
+                                <Menu onClick={handleClick} items={items} style={{ background: '#B11A5F', borderColor: '#B11A5F', color: '#fff' }} />
+                            </Space>
                         </Col>
                     </Row>
                     <Row className="px-5 pt-2 w-100">
@@ -188,7 +205,7 @@ const BucketLifecyclepage = () => {
                     </Row>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
